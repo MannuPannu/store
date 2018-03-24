@@ -142,7 +142,7 @@ So we can think of our application conceptually like this:
 ```js
 // Pseudocode
 const nextValueOfCount = streamOfActions.reduce(
-  (currentValueOfCount, action) => {
+  (state, action) => {
     switch(action.type) {
       case 'INCREMENT': return state + 1;
       case 'DECREMENT': return state - 1;
